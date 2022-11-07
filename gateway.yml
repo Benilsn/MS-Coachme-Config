@@ -22,10 +22,12 @@ spring:
           uri: lb://EMAIL_SENDER
           predicates:
             - Path=/send-email
+            - Method=POST
         - id: user
           uri: lb://USER
           predicates:
             - Path=/v1/user/**
+            - Method=GET,POST
         - id: mentorship
           uri: lb://MENTORSHIP
           predicates:
