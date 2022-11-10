@@ -10,29 +10,29 @@ eureka:
     server:
       wait-time-in-ms-when-sync-empty: 3000
 
-spring:
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-      routes:
-        - id: email_sender
-          uri: lb://EMAIL_SENDER
-          predicates:
-            - Path=/send-email
-            - Method=POST
-        - id: user
-          uri: lb://USER
-          predicates:
-            - Path=/v1/user/**
-            - Method=GET,POST
-        - id: mentorship
-          uri: lb://MENTORSHIP
-          predicates:
-            - Path=/v1/disponibility/**
-            - Path=/v1/mentorship/**
-            - Path=/v1/request/**
-            - Path=/v1/rating/**
+# spring:
+#   cloud:
+#     gateway:
+#       discovery:
+#         locator:
+#           enabled: true
+#           lower-case-service-id: true
+#       routes:
+#         - id: email_sender
+#           uri: lb://EMAIL_SENDER
+#           predicates:
+#             - Path=/send-email
+#             - Method=POST
+#         - id: user
+#           uri: lb://USER
+#           predicates:
+#             - Path=/v1/user/**
+#             - Method=GET,POST
+#         - id: mentorship
+#           uri: lb://MENTORSHIP
+#           predicates:
+#             - Path=/v1/disponibility/**
+#             - Path=/v1/mentorship/**
+#             - Path=/v1/request/**
+#             - Path=/v1/rating/**
             
