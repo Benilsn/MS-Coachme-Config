@@ -17,3 +17,5 @@ spring:
   rabbitmq:
     addresses: amqps://uvigbyif:R12FKow9Qqoag_FO6PWhx3ZV3T-ZiF8M@jackal.rmq.cloudamqp.com/uvigbyif
     queue: coachme_queue
+    bindingKey: coachme_bindingKey
+    exchange: coachme_exchange
