@@ -19,9 +19,6 @@ spring:
     port: 5672
     username: guest
     password: guest
-    exchanges:
-      internal: coachme_exchange
-    queues:
-      notification: coachme_queue
-    routing-keys:
-      internal-notification: coachme_routingKey
+    exchanges: coachme_exchange
+    queues: coachme_queue
+    routing-keys: coachme_routingKey
